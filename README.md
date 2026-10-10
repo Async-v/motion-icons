@@ -36,3 +36,10 @@ npm run preview
 ## Icon license
 The sample icon components are from [Lucide](https://lucide.dev/), an open-source icon set. Review its license and attribution guidance before redistributing your own packaged icon library. This starter is inspired by the general icon-library browsing pattern and is not affiliated with Remix Icon.
 # motion-icons
+
+## Screenshot
+
+![Project Screenshot](./assets/screenshot-1.png)
+![Project Screenshot](./assets/screenshot-2.png)
+![Project Screenshot](./assets/screenshot-3.png)
+![Project Screenshot](./assets/screenshot-4.png)
