@@ -41,5 +41,3 @@ The sample icon components are from [Lucide](https://lucide.dev/), an open-sourc
 
 ![Project Screenshot](./assets/screenshot-1.png)
 ![Project Screenshot](./assets/screenshot-2.png)
-![Project Screenshot](./assets/screenshot-3.png)
-![Project Screenshot](./assets/screenshot-4.png)
