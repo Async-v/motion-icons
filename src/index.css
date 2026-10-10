@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: Inter, sans-serif; color: #242421; background: #fafaf9; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+::selection { background: #deded4; color: #22221e; }
+.hero-grid { background-image: linear-gradient(to right, #e9e8e4 1px, transparent 1px), linear-gradient(to bottom, #e9e8e4 1px, transparent 1px); background-size: 54px 54px; mask-image: linear-gradient(to bottom, transparent, black 15%, black 75%, transparent); opacity: .36; }
+.serif-word { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-style: italic; letter-spacing: -.075em; }
+.brand-mark { display: inline-flex; height: 30px; width: 30px; align-items: center; justify-content: center; border-radius: 8px; background: #292925; color: white; }
+.brand-mark.small { height: 22px; width: 22px; border-radius: 6px; }
+.nav-link { display: inline-flex; align-items: center; gap: 4px; transition: color .2s; }
+.nav-link:hover, .nav-link.active { color: #282824; }
+.hero-icon { display: flex; height: 42px; width: 42px; flex-shrink: 0; align-items: center; justify-content: center; color: #55554f; border: 1px solid transparent; border-radius: 10px; transition: background .2s, color .2s; }
+.hero-icon:hover { background: #f4f4f0; color: #292925; }
+.section-kicker { display: flex; align-items: center; gap: 10px; color: #8f8e87; font: 10px 'DM Mono', monospace; letter-spacing: .12em; }
+.section-kicker span { color: #b3b2ab; letter-spacing: .05em; }
+.category-btn { display: flex; min-width: max-content; align-items: center; justify-content: space-between; border-radius: 6px; padding: 9px 10px; color: #77766f; font-size: 11px; transition: all .15s; }
+.category-btn:hover { background: #f1f1ed; color: #33332e; }
+.category-active { background: #eeeee9; color: #282824; font-weight: 500; }
+.category-dot { height: 5px; width: 5px; border-radius: 50%; background: #c3c2bb; }
+.category-active .category-dot { background: #77766f; }
+.search-box:focus-within { border-color: #c4c3bc; box-shadow: 0 0 0 3px #eeeee9; }
+.icon-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+@media (min-width: 520px) { .icon-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 11px; } }
+@media (min-width: 850px) { .icon-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 1150px) { .icon-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.icon-card { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; border: 1px solid #e9e8e4; border-radius: 8px; background: rgba(255,255,255,.55); padding: 14px; transition: border-color .18s, background .18s, transform .18s; }
+.icon-card:hover { transform: translateY(-2px); border-color: #d4d3cc; background: white; }
+.icon-preview { display: flex; height: 80px; width: 100%; align-items: center; justify-content: center; border-radius: 5px; background: #f5f5f2; color: #3f3f39; transition: background .2s, color .2s; }
+.icon-card:hover .icon-preview { background: #eeeee9; color: #22221e; }
+.icon-open { display: flex; align-items: center; justify-content: center; color: #77766f; }
+.detail-icon { display: flex; height: 112px; width: 112px; align-items: center; justify-content: center; border: 1px solid #eeede8; border-radius: 16px; background: #fafaf8; color: #292925; }
+input[type=range] { height: 4px; cursor: pointer; }
+.code-purple { color: #8b6ab3; }.code-blue { color: #527c9c; }.code-green { color: #7b9367; }.code-orange { color: #b8794e; }
+.animation-pulse > svg { animation: pulse 1.6s ease-in-out infinite; }
+.animation-nudge-right > svg { animation: nudge-right .65s ease both; }
+.animation-nudge-up > svg { animation: nudge-up .65s ease both; }
+.animation-nudge-down > svg { animation: nudge-down .65s ease both; }
+.animation-nudge-left > svg { animation: nudge-left .65s ease both; }
+.animation-nudge-diagonal > svg { animation: nudge-diagonal .65s ease both; }
+.animation-ring > svg { transform-origin: top center; animation: ring .8s ease both; }
+.animation-pop > svg { animation: pop .55s cubic-bezier(.2,.8,.2,1) both; }
+.animation-draw > svg { animation: draw .8s ease both; }
+.animation-float > svg { animation: float 2s ease-in-out infinite; }
+.animation-blink > svg { animation: blink 1.8s ease-in-out infinite; }
+.animation-flicker > svg { animation: flicker 1.5s ease-in-out infinite; }
+.animation-heartbeat > svg { animation: heartbeat 1.2s ease-in-out infinite; }
+.animation-spin > svg { animation: spin 1.6s linear infinite; }
+.animation-wiggle > svg { animation: wiggle .6s ease both; }
+.animation-rotate > svg { animation: rotate .7s ease both; }
+.animation-bounce > svg { animation: bounce .7s ease both; }
+.animation-twinkle > svg { animation: twinkle 1.8s ease-in-out infinite; }
+
+/* Icon cards stay still until hovered; then the icon loops while the pointer is over the card. */
+.icon-preview.animation-pulse > svg,
+.icon-preview.animation-nudge-right > svg,
+.icon-preview.animation-nudge-up > svg,
+.icon-preview.animation-nudge-down > svg,
+.icon-preview.animation-nudge-left > svg,
+.icon-preview.animation-nudge-diagonal > svg,
+.icon-preview.animation-ring > svg,
+.icon-preview.animation-pop > svg,
+.icon-preview.animation-draw > svg,
+.icon-preview.animation-float > svg,
+.icon-preview.animation-blink > svg,
+.icon-preview.animation-flicker > svg,
+.icon-preview.animation-heartbeat > svg,
+.icon-preview.animation-spin > svg,
+.icon-preview.animation-wiggle > svg,
+.icon-preview.animation-rotate > svg,
+.icon-preview.animation-bounce > svg,
+.icon-preview.animation-twinkle > svg { animation: none; }
+.icon-card:hover .icon-preview.animation-pulse > svg { animation: pulse 1.6s ease-in-out infinite; }
+.icon-card:hover .icon-preview.animation-nudge-right > svg { animation: nudge-right .65s ease infinite; }
+.icon-card:hover .icon-preview.animation-nudge-up > svg { animation: nudge-up .65s ease infinite; }
+.icon-card:hover .icon-preview.animation-nudge-down > svg { animation: nudge-down .65s ease infinite; }
+.icon-card:hover .icon-preview.animation-nudge-left > svg { animation: nudge-left .65s ease infinite; }
+.icon-card:hover .icon-preview.animation-nudge-diagonal > svg { animation: nudge-diagonal .65s ease infinite; }
+.icon-card:hover .icon-preview.animation-ring > svg { transform-origin: top center; animation: ring .8s ease infinite; }
+.icon-card:hover .icon-preview.animation-pop > svg { animation: pop .8s cubic-bezier(.2,.8,.2,1) infinite; }
+.icon-card:hover .icon-preview.animation-draw > svg { animation: draw .8s ease infinite; }
+.icon-card:hover .icon-preview.animation-float > svg { animation: float 2s ease-in-out infinite; }
+.icon-card:hover .icon-preview.animation-blink > svg { animation: blink 1.8s ease-in-out infinite; }
+.icon-card:hover .icon-preview.animation-flicker > svg { animation: flicker 1.5s ease-in-out infinite; }
+.icon-card:hover .icon-preview.animation-heartbeat > svg {animation: heartbeat 1.2s ease-in-out infinite;}
+.icon-card:hover .icon-preview.animation-spin > svg { animation: spin 1.6s linear infinite; }
+.icon-card:hover .icon-preview.animation-wiggle > svg { animation: wiggle .8s ease infinite; }
+.icon-card:hover .icon-preview.animation-rotate > svg { animation: rotate .8s ease infinite; }
+.icon-card:hover .icon-preview.animation-bounce > svg { animation: bounce .8s ease infinite; }
+.icon-card:hover .icon-preview.animation-twinkle > svg { animation: twinkle 1.8s ease-in-out infinite; }
+
+/* Motion is applied to the SVG child only; preview tiles and detail surfaces stay still. */
+@keyframes pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(.92); opacity: .6; } }
+@keyframes nudge-right { 0%,100% { transform: translateX(0); } 45% { transform: translateX(5px); } }
+@keyframes nudge-up { 0%,100% { transform: translateY(0); } 45% { transform: translateY(-5px); } }
+@keyframes nudge-down { 0%,100% { transform: translateY(0); } 45% { transform: translateY(5px); } }
+@keyframes nudge-left { 0%,100% { transform: translateX(0); } 45% { transform: translateX(-5px); } }
+@keyframes nudge-diagonal { 0%,100% { transform: translate(0); } 45% { transform: translate(4px,-4px); } }
+@keyframes ring { 0%,100% { transform: rotate(0); } 15%,45%,75% { transform: rotate(12deg); } 30%,60%,90% { transform: rotate(-12deg); } }
+@keyframes pop { 0% { transform: scale(.85); } 55% { transform: scale(1.14); } 100% { transform: scale(1); } }
+@keyframes draw { 0% { opacity: .45; transform: scale(.9); } 65% { opacity: 1; transform: scale(1.08); } 100% { transform: scale(1); } }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes blink { 0%,90%,100% { transform: scaleY(1); } 95% { transform: scaleY(.2); } }
+@keyframes flicker { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .65; transform: scale(1.06); } }
+@keyframes heartbeat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.2); } 30% { transform: scale(1); } 45% { transform: scale(1.15); } 60% { transform: scale(1); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes wiggle { 0%,100% { transform: rotate(0); } 25% { transform: rotate(-8deg); } 75% { transform: rotate(8deg); } }
+@keyframes rotate { from { transform: rotate(-35deg); } to { transform: rotate(0); } }
+@keyframes bounce { 0%,100% { transform: translateY(0); } 35% { transform: translateY(-6px); } 65% { transform: translateY(2px); } }
+@keyframes twinkle { 0%,100% { transform: scale(1) rotate(0); opacity: 1; } 50% { transform: scale(.82) rotate(12deg); opacity: .6; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
